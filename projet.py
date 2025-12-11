@@ -27,3 +27,13 @@ print("****** Opération ******")
 #2) Sélectionner la colonne "Longueur"
 Longueur = df["Longueur"]
 print(Longueurs)
+
+#3) filtrer les séquences avec une longuer superieur à 10
+print("************fltrage avec longuer >10*************")
+filtered_df=df[df["longuer"]>10]
+print(filtered_df)
+
+#4) la moyenne de pourcentage GC
+print("**************moyenne de pourcentage GC%**************")
+average_GC=df["pourcentage GC"].mean() 
+print(f"pourcentage GC :{averae_GC:.3f}")
