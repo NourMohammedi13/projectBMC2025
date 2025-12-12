@@ -59,3 +59,6 @@ print("*******calcul de l"écart type*******")
 print(f"écart type du longueur:{écart_type_longeur:.3f}%")
 # print( "\n" "\n")
 
+#8)sauvegarde et chargement des données avec panda
+#sauvegarder le dataframe dans un fichier csv
+df.to_csv("tableau_séquence.csv", index=false)
