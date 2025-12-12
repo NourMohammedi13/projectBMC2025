@@ -35,30 +35,29 @@ print(filtered_df)
 
 #4) la moyenne de pourcentage GC
 print("**************moyenne de Pourcentage GC%**************")
-average_GC_df_filtered=filtered_df["Pourcentage GC"].mean() 
-print(f"Pourcentage GC :{average_GC_df_filtered:.3f}%")
+average_GC_df_filtered = filtered_df["Pourcentage GC"].mean() 
+print(f"Pourcentage GC : {average_GC_df_filtered:.3f}%")
 
 #5)Ajouter une nouvelle colonne avec des calculs
 print("************* Ajout d'une nouvelle colonne *************")
 # Ajouter une nouvelle colonne "catégorisée Pourcentage GC"
-df.["Ctégorie Pourcentage GC"]. = df.["Pourcentage GC"].apply(lamba X:"Riche" if X > 55 else ("Moyen" if 45<=55 else
-"faible"))
+df["Ctégorie Pourcentage GC"] = df["Pourcentage GC"].apply(lambda X:"Riche" if X > 55 else ("Moyen" if 45<=55 else
+"Faible"))
 
-print(df, "\n" "\n")
+print(df, "\n\n")
 
 #6) Ajouter une colonne comptant les 'G'
-df.|["Nombre de G"]. = df.["Séquence"].str.count("G")
+df["Nombre de G"] = df["Séquence"].str.count("G")
 print("===== Nombre de G ajoutés =====")
-print(df, "\n" "\n")
+print(df, "\n\n")
 
 #7)calculer l'écart type du pourcentage GC et de la longueur des séquence
-print("*******calcul de l"écart type*******")
-écart_type_GC = df["pourcentage GC"].std()
-écart_type_longeur = df["longeur"].std()
-# print(f"écart typedu pourcentagede GC : {écart_typeGC:.3f}%")
+print("*******calcul de l'écart type*******")
+écart_type_GC = df["Pourcentage GC"].std()
+écart_type_longeur = df["Longueur"].std()
+# print(f"écart type du pourcentagede GC : {écart_typeGC:.3f}%")
 print(f"écart type du longueur:{écart_type_longeur:.3f}%")
-# print( "\n" "\n")
 
 #8)sauvegarde et chargement des données avec panda
 #sauvegarder le dataframe dans un fichier csv
-df.to_csv("tableau_séquence.csv", index=false)
+df.to_csv("tableau_sequence.csv", index=False)
