@@ -28,15 +28,15 @@ print("****** Opération ******")
 Longueur = df["Longueur"]
 print(Longueurs)
 
-#3) filtrer les séquences avec une longuer superieur à 10
-print("************fltrage avec longuer >10*************")
-filtered_df=df[df["longuer"]>10]
+#3) filtrer les séquences avec une Longueur superieur à 10
+print("************fltrage avec Longueur >10*************")
+filtered_df=df[df["Longueur"]>10]
 print(filtered_df)
 
 #4) la moyenne de pourcentage GC
-print("**************moyenne de pourcentage GC%**************")
-average_GC=df["pourcentage GC"].mean() 
-print(f"pourcentage GC :{averae_GC:.3f}")
+print("**************moyenne de Pourcentage GC%**************")
+average_GC_df_filtered=filtered_df["Pourcentage GC"].mean() 
+print(f"Pourcentage GC :{average_GC_df_filtered:.3f}%")
 
 #5)Ajouter une nouvelle colonne avec des calculs
 print("************* Ajout d'une nouvelle colonne *************")
