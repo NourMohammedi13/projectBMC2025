@@ -37,3 +37,16 @@ print(filtered_df)
 print("**************moyenne de pourcentage GC%**************")
 average_GC=df["pourcentage GC"].mean() 
 print(f"pourcentage GC :{averae_GC:.3f}")
+
+#5)Ajouter une nouvelle colonne avec des calculs
+print("************* Ajout d'une nouvelle colonne *************")
+# Ajouter une nouvelle colonne "catégorisée Pourcentage GC"
+df.["Ctégorie Pourcentage GC"]. = df.["Pourcentage GC"].apply(lamba X:"Riche" if X > 55 else ("Moyen" if 45<=55 else
+"faible"))
+
+print(df, "\n" "\n")
+
+#6) Ajouter une colonne comptant les 'G'
+df.|["Nombre de G"]. = df.["Séquence"].str.count("G")
+print("===== Nombre de G ajoutés =====")
+print(df, "\n" "\n")
